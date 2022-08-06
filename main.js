@@ -16,6 +16,8 @@ var count = 0;
 result = document.getElementById("result");
 
 generator.onclick = function () {
+  var min = document.getElementById("min").value;
+  var max = document.getElementById("max").value;
   var t = new Date();
   var date = ("0" + t.getDate()).slice(-2);
   var month = ("0" + (t.getMonth() + 1)).slice(-2);
@@ -35,7 +37,7 @@ generator.onclick = function () {
           <br>
       </span>
       <span style="font-size: 65%;">
-          Min: 1, Max: 999
+          Min: ${min}, Max: ${max}
           <br>
           ${time}
       </span>
